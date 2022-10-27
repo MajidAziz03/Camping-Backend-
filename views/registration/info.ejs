@@ -1,0 +1,9 @@
+<% layout('layout/boilerplate')  %> 
+    <div class="container">
+        <% if(!currentUser) { %>
+            <a class="btn btn-success" href="/login"> login </a>
+            <a class="btn btn-primary" href="/register"> Register </a>
+            <% } else { %>
+                <a class="btn btn-danger" href="/logout"> Logout </a>
+                <% } %>
+    </div>

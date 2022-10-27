@@ -1,0 +1,22 @@
+<% layout('layout/boilerplate') %>
+    <div class="container">
+        <h1 class="text-center mb-4"> Edit this Campground </h1>
+
+        <form action="/campgrounds/<%= camp._id %>?_method=put" method="post">
+            <label for="title"> title </label>
+            <input class="form-control mb-4 mt-4" type="text" name="title" value="<%= camp.title  %> ">
+
+            <label for="location"> location </label>
+            <input class="form-control mb-4" type="text" name="location" value="<%= camp.location  %> ">
+
+            <label for="description"> description </label>
+            <input class="form-control mb-4" type="text" name="description" value="<%= camp.description  %> ">
+
+            <label for="price"> price </label>
+            <input class="form-control mb-4" type="text" name="price" value="<%= camp.price  %> ">
+
+            <button class="btn btn-success mb-3"> Update Campground </button>
+            <a class="btn btn-danger mb-3" href="/campgrounds/<%= camp._id  %> "> Cancel </a>
+        </form>
+
+    </div>

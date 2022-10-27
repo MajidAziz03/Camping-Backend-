@@ -1,0 +1,14 @@
+<% layout('layout/boilerplate') %> 
+<div class="container">
+    <h1 class="text-center mb-4" > Create a New Campground </h1>
+    <form action="/campgrounds" method="post" enctype="multipart/form-data">
+        <input class="form-control mb-4" type="text" name="title" placeholder="Enter title" required>
+        <input class="form-control mb-4" type="text" name="location" placeholder="Location" required>
+        <input class="form-control mb-4" type="text" name="description" placeholder="description" required>
+        <input class="form-control mb-4" type="file" name="image">
+        <input class="form-control mb-4" type="number" name="price" placeholder="price" required>
+        <button class="btn btn-success mb-4"> Add Campground </button>
+    </form>
+    <a class="btn btn-secondary" href="/campgrounds"> Go-Back </a>
+</div>
+    
